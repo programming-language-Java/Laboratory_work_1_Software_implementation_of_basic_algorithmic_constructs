@@ -38,8 +38,9 @@ class Matrix {
             height = sc.nextInt();
             System.out.print("Введите ширину прямоугольной матрицы: ");
             width = sc.nextInt();
-            if (height == width) System.out.println("Вы ввели размеры не прямоугольной матрицы. Попробуйте ещё раз");
-        } while (height == width);
+            if (height == width || height == 0 || width == 0)
+                System.out.println("Вы ввели размеры не прямоугольной матрицы. Попробуйте ещё раз");
+        } while (height == width || height == 0 || width == 0);
     }
 
     public void create() {
@@ -77,6 +78,8 @@ class Matrix {
     }
 
     public void addMaxAndMinElement() {
+        maxElement = matrix[0][0];
+        minElement = matrix[0][0];
         for (int row = 0; row < matrix.length; row++)
             for (int column = 0; column < matrix[row].length; column++) {
                 addMaxElement(row, column);
@@ -85,7 +88,7 @@ class Matrix {
     }
 
     public void addMaxElement(int row, int column) {
-        if (matrix[row][column] > matrix[maxRowIndex][maxColumnIndex]) {
+        if (matrix[row][column] > maxElement) {
             maxElement = matrix[row][column];
             maxRowIndex = row;
             maxColumnIndex = column;
@@ -93,7 +96,7 @@ class Matrix {
     }
 
     public void addMinElement(int row, int column) {
-        if (matrix[row][column] < matrix[minRowIndex][minColumnIndex]) {
+        if (matrix[row][column] < minElement) {
             minElement = matrix[row][column];
             minRowIndex = row;
             minColumnIndex = column;
@@ -104,7 +107,6 @@ class Matrix {
         matrix[maxRowIndex][maxColumnIndex] = minElement;
         matrix[minRowIndex][minColumnIndex] = maxElement;
     }
-
 
     public void printMaxAndMinElement() {
         printMaxElement();

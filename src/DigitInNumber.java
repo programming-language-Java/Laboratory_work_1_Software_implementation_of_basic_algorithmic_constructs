@@ -7,16 +7,17 @@ public class DigitInNumber {
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите целое число: ");
         int N = abs(sc.nextInt());
-        int digit = 0;
+        int number = N;
+        int digit;
         boolean isDigitInNumber = false;
 
-        while (N > 0) {
-            digit = N % 10;
-            isDigitInNumber = isDigitInNumber(digit, N);
+        while (number > 0) {
+            digit = number % 10;
+            isDigitInNumber = isDigitInNumber(digit, number);
             if (isDigitInNumber) break;
-            N /= 10;
+            number /= 10;
         }
-        if (isDigitInNumber) {
+        if (isDigitInNumber || N == 0) {
             System.out.print("Цифра входит в запись числа");
             return;
         }
@@ -24,6 +25,8 @@ public class DigitInNumber {
     }
 
     public static boolean isDigitInNumber(int digit, int N) {
+        System.out.println("digit: " + digit);
+        System.out.println("N: " + N);
         if (digit % 4 == 0) {
             String strN = Integer.toString(N),
                     strDigit = Integer.toString(digit);

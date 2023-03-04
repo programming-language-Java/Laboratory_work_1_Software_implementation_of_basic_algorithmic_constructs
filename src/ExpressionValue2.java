@@ -22,6 +22,6 @@ public class ExpressionValue2 {
             nextN += n;
             if (nextN == 0) break;
         }
-        System.out.println("Значение выражения равно: " + p);
+        System.out.print("Значение выражения равно: " + p);
     }
 }
