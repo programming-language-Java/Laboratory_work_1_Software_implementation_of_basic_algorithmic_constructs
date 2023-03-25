@@ -5,7 +5,7 @@ import static java.lang.Math.*;
 public class DigitInNumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Введите целое число: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ: ");
         int N = abs(sc.nextInt());
         int number = N;
         int digit;
@@ -18,10 +18,10 @@ public class DigitInNumber {
             number /= 10;
         }
         if (isDigitInNumber || N == 0) {
-            System.out.print("Цифра входит в запись числа");
+            System.out.print("Р¦РёС„СЂР° РІС…РѕРґРёС‚ РІ Р·Р°РїРёСЃСЊ С‡РёСЃР»Р°");
             return;
         }
-        System.out.print("Цифра НЕ входит в запись числа");
+        System.out.print("Р¦РёС„СЂР° РќР• РІС…РѕРґРёС‚ РІ Р·Р°РїРёСЃСЊ С‡РёСЃР»Р°");
     }
 
     public static boolean isDigitInNumber(int digit, int N) {

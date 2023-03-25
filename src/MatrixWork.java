@@ -8,7 +8,7 @@ public class MatrixWork {
         matrix.addMaxAndMinElement();
         matrix.printMaxAndMinElement();
         matrix.swapMaxAndMinElement();
-        System.out.println("Поменяли местами максимальный и минимальный элемент");
+        System.out.println("РџРѕРјРµРЅСЏР»Рё РјРµСЃС‚Р°РјРё РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ Рё РјРёРЅРёРјР°Р»СЊРЅС‹Р№ СЌР»РµРјРµРЅС‚");
         matrix.print();
     }
 }
@@ -34,12 +34,12 @@ class Matrix {
     public void set() {
         Scanner sc = new Scanner(System.in);
         do {
-            System.out.print("Введите высоту прямоугольной матрицы: ");
+            System.out.print("Р’РІРµРґРёС‚Рµ РІС‹СЃРѕС‚Сѓ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРѕР№ РјР°С‚СЂРёС†С‹: ");
             height = sc.nextInt();
-            System.out.print("Введите ширину прямоугольной матрицы: ");
+            System.out.print("Р’РІРµРґРёС‚Рµ С€РёСЂРёРЅСѓ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРѕР№ РјР°С‚СЂРёС†С‹: ");
             width = sc.nextInt();
             if (height == width || height == 0 || width == 0)
-                System.out.println("Вы ввели размеры не прямоугольной матрицы. Попробуйте ещё раз");
+                System.out.println("Р’С‹ РІРІРµР»Рё СЂР°Р·РјРµСЂС‹ РЅРµ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРѕР№ РјР°С‚СЂРёС†С‹. РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰С‘ СЂР°Р·");
         } while (height == width || height == 0 || width == 0);
     }
 
@@ -55,7 +55,7 @@ class Matrix {
     }
 
     public void print() {
-        System.out.println("Матрица:");
+        System.out.println("РњР°С‚СЂРёС†Р°:");
         for (int[] row : matrix)
             printRow(row);
     }
@@ -114,16 +114,16 @@ class Matrix {
     }
 
     public void printMaxElement() {
-        System.out.println("Максимальный элемент матрицы:");
-        System.out.println("\tСтрока: " + (maxRowIndex + 1));
-        System.out.println("\tСтолбец: " + (maxColumnIndex + 1));
-        System.out.println("\tЭлемент: " + maxElement);
+        System.out.println("РњР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СЌР»РµРјРµРЅС‚ РјР°С‚СЂРёС†С‹:");
+        System.out.println("\tРЎС‚СЂРѕРєР°: " + (maxRowIndex + 1));
+        System.out.println("\tРЎС‚РѕР»Р±РµС†: " + (maxColumnIndex + 1));
+        System.out.println("\tР­Р»РµРјРµРЅС‚: " + maxElement);
     }
 
     public void printMinElement() {
-        System.out.println("Минимальный элемент матрицы:");
-        System.out.println("\tСтрока: " + (minRowIndex + 1));
-        System.out.println("\tСтолбец: " + (minColumnIndex + 1));
-        System.out.println("\tЭлемент: " + minElement);
+        System.out.println("РњРёРЅРёРјР°Р»СЊРЅС‹Р№ СЌР»РµРјРµРЅС‚ РјР°С‚СЂРёС†С‹:");
+        System.out.println("\tРЎС‚СЂРѕРєР°: " + (minRowIndex + 1));
+        System.out.println("\tРЎС‚РѕР»Р±РµС†: " + (minColumnIndex + 1));
+        System.out.println("\tР­Р»РµРјРµРЅС‚: " + minElement);
     }
 }

@@ -5,11 +5,11 @@ import static java.lang.Math.*;
 public class Number {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Введите целое число: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ: ");
         int N = sc.nextInt();
-        int numberDigits = (int) ceil(log10(abs(N) + 0.5));
-        boolean isEvenTwoDigitNumber = numberDigits == 2 && N % 2 == 0;
-        String result = isEvenTwoDigitNumber ? "Число является четным двухзначным" : "Число НЕ является четным двухзначным";
+        int numberOfDigits = (int) ceil(log10(abs(N) + 0.5));
+        boolean isEvenTwoDigitNumber = numberOfDigits == 2 && N % 2 == 0;
+        String result = isEvenTwoDigitNumber ? "Р§РёСЃР»Рѕ СЏРІР»СЏРµС‚СЃСЏ С‡РµС‚РЅС‹Рј РґРІСѓС…Р·РЅР°С‡РЅС‹Рј" : "Р§РёСЃР»Рѕ РќР• СЏРІР»СЏРµС‚СЃСЏ С‡РµС‚РЅС‹Рј РґРІСѓС…Р·РЅР°С‡РЅС‹Рј";
         System.out.print(result);
     }
 }

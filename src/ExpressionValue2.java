@@ -2,16 +2,16 @@ import java.util.Scanner;
 
 public class ExpressionValue2 {
     public static void main(String[] args) {
-        System.out.println("Программа для вычисления значения выражения:\n" + "a(a - n)(a - 2n)*...*(a - n^2)");
+        System.out.println("РџСЂРѕРіСЂР°РјРјР° РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ Р·РЅР°С‡РµРЅРёСЏ РІС‹СЂР°Р¶РµРЅРёСЏ:\n" + "a(a - n)(a - 2n)*...*(a - n^2)");
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Введите вещественное число a: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ РІРµС‰РµСЃС‚РІРµРЅРЅРѕРµ С‡РёСЃР»Рѕ a: ");
         double a = sc.nextDouble();
-        System.out.print("Введите целое число n: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ n: ");
         int n = sc.nextInt();
 
         if (n < 0) {
-            System.out.print("Исходные данные не верны!");
+            System.out.print("РСЃС…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ РЅРµ РІРµСЂРЅС‹!");
             return;
         }
 
@@ -22,6 +22,6 @@ public class ExpressionValue2 {
             nextN += n;
             if (nextN == 0) break;
         }
-        System.out.print("Значение выражения равно: " + p);
+        System.out.print("Р—РЅР°С‡РµРЅРёРµ РІС‹СЂР°Р¶РµРЅРёСЏ СЂР°РІРЅРѕ: " + p);
     }
 }

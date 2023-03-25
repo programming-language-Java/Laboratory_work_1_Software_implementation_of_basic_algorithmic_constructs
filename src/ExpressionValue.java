@@ -4,15 +4,15 @@ import static java.lang.Math.sin;
 
 public class ExpressionValue {
     public static void main(String[] args) {
-        System.out.println("Введите данные для вычисления значения выражения (x + 0.45 * z) / 7 * y + x * y / sin(x - 2 * z)");
+        System.out.println("Р’РІРµРґРёС‚Рµ РґР°РЅРЅС‹Рµ РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ Р·РЅР°С‡РµРЅРёСЏ РІС‹СЂР°Р¶РµРЅРёСЏ (x + 0.45 * z) / (7 * y) + (x * y) / sin(x - 2 * z)");
         Scanner sc = new Scanner(System.in);
-        System.out.print("Введите x: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ x: ");
         double x = sc.nextDouble();
-        System.out.print("Введите y: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ y: ");
         double y = sc.nextDouble();
-        System.out.print("Введите z: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ z: ");
         double z = sc.nextDouble();
-        double result = (x + 0.45 * z) / 7 * y + x * y / sin(x - 2 * z);
-        System.out.print("Результата: " + result);
+        double result = (x + 0.45 * z) / (7 * y) + (x * y) / sin(x - 2 * z);
+        System.out.print("Р РµР·СѓР»СЊС‚Р°С‚Р°: " + result);
     }
 }
